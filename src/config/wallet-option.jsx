@@ -21,6 +21,7 @@ export function WalletOptions() {
           className="wallet-button"
           onClick={() => handleConnect(connector)}
         >
+          <img src={connector.icon} alt="" style={{marginRight: "10px", height: "20px"}} />
           {connector.name}
         </button>
       ))}

@@ -1,3 +1,4 @@
+/* Account Component Styles */
 .account-container {
   display: flex;
   flex-direction: column;
@@ -5,30 +6,70 @@
   justify-content: center;
   max-width: 350px;
   margin: 20px auto;
-  padding: 16px;
+  padding: 20px;
   border-radius: 10px;
   background-color: #ffffff;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.12);
   text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.account-container:hover {
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.account-info {
+  width: 100%;
+  margin: 12px 0;
 }
 
 .account-info p {
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 600;
   color: #333;
-  margin-bottom: 8px;
+  margin-bottom: 12px;
+  text-align: left;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-info p strong {
+  color: #555;
+  margin-right: 8px;
 }
 
 .account-container img {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  margin-bottom: 10px;
-  border: 3px solid #4CAF50;
+  margin-bottom: 16px;
+  border: 3px solid #4CAF90;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.account-avatar-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+  border: 3px solid #4CAF90;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #4CAF90;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .disconnect-button {
-  padding: 10px 14px;
+  padding: 10px 18px;
   border: none;
   border-radius: 8px;
   background-color: #ff4d4d;
@@ -37,23 +78,103 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 200px;
+  box-shadow: 0 2px 5px rgba(255, 77, 77, 0.3);
 }
 
 .disconnect-button:hover {
   background-color: #e60000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 77, 77, 0.4);
+}
+
+.disconnect-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(255, 77, 77, 0.3);
+}
+
+.chain-selector-container {
+  position: relative;
+  width: 100%;
+  margin-top: 14px;
+  margin-bottom: 14px;
 }
 
 .chain-selector {
-  margin-top: 10px;
-  padding: 8px;
+  width: 100%;
+  padding: 10px 12px;
   font-size: 14px;
-  border-radius: 5px;
+  border-radius: 6px;
   border: 1px solid #ccc;
   cursor: pointer;
+  background-color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+.chain-selector:hover {
+  border-color: #999;
+}
+
+.chain-selector:focus {
+  border-color: #4CAF90;
+  box-shadow: 0 0 0 2px rgba(76, 175, 144, 0.2);
+}
+
+.selector-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #666;
+}
+
+.account-address {
+  font-weight: bold;
+  color: #4CAF90;
+  word-break: break-all;
+}
+
+.status-text {
+  display: block;
+  padding: 14px;
+  margin: 20px auto;
+  max-width: 350px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #666;
+  text-align: center;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Responsive Adjustments */
 @media (max-width: 480px) {
   .account-container {
     width: 90%;
+    padding: 16px;
+  }
+  
+  .account-container img,
+  .account-avatar-placeholder {
+    width: 70px;
+    height: 70px;
+  }
+  
+  .account-info p {
+    font-size: 13px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .account-info p strong {
+    margin-bottom: 4px;
+    display: block;
   }
 }

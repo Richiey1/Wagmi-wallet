@@ -1,60 +1,162 @@
+/* Wallet Options Component Styles */
 .connect-wallet-button {
   display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 300px;
-    margin: 20px auto;
-    padding: 16px;
-    border: none;
-    border-radius: 10px;
-    background-color: #4CAF90;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #4CAF90;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+.connect-wallet-button:hover {
+  background-color: #3d9678;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.connect-wallet-button:active {
+  transform: translateY(0);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 .wallet-options {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    max-width: 300px;
-    margin: 20px auto;
-    padding: 16px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  .wallet-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wallet-options-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.wallet-options-title {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333333;
+}
+
+.wallet-options-close {
+  background: transparent;
+  border: none;
+  color: #666666;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.wallet-options-close:hover {
+  background-color: #f5f5f5;
+}
+
+.wallet-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: left;
+}
+
+.wallet-button:hover {
+  background-color: #f0f0f0;
+}
+
+.wallet-button:active {
+  background-color: #e8e8e8;
+}
+
+.wallet-button img {
+  height: 24px;
+  width: 24px;
+  margin-right: 12px;
+  border-radius: 50%;
+  object-fit: contain;
+}
+
+.wallet-button-active {
+  background-color: #4CAF90;
+  color: white;
+}
+
+.wallet-button-active:hover {
+  background-color: #3d9678;
+}
+
+.wallet-button-active img {
+  filter: brightness(0) invert(1);
+}
+
+.wallet-button:disabled {
+  background-color: #eaeaea;
+  color: #999999;
+  cursor: not-allowed;
+}
+
+.icon-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-right: 12px;
+  color: #666666;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Account Status */
+.status-text {
+  text-align: center;
+  padding: 16px;
+  margin: 20px auto;
+  max-width: 300px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  font-size: 15px;
+  color: #666666;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .connect-wallet-button,
+  .wallet-options,
+  .status-text {
+    width: 90%;
+    max-width: none;
   }
   
   .wallet-button {
-    background-color: #4CAF90;
-    color: white;
+    padding: 14px 12px;
   }
-  
-  .wallet-button:hover {
-    background-color: #89a045;
-  }
-  
-  .wallet-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  @media (max-width: 480px) {
-    .wallet-options {
-      width: 90%;
-    }
-  }
-  
+}
