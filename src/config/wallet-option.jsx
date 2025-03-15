@@ -2,9 +2,14 @@ import React, { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useEnsName } from "wagmi";
 import { shortenAddress } from "../utils/addressUtils";
 import { motion } from "framer-motion";
-import { FaCopy, FaCheck, FaTimes, FaWallet, FaShieldAlt } from "react-icons/fa";
+import {
+  FaCopy,
+  FaCheck,
+  FaTimes,
+  FaWallet,
+  FaShieldAlt,
+} from "react-icons/fa";
 import "../config/wallet-option.css";
-
 
 const WalletConnect = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -83,9 +88,11 @@ const WalletConnect = () => {
               {connectors.map((connector) => (
                 <motion.div
                   key={connector.id}
-                  className="wallet-option"
-                  whileHover={{ scale: 1.05 }}
-                  onClick={() => handleConnect(connector)}
+                  className={`wallet-option ${
+                    connector.ready ? "" : "wallet-disabled"
+                  }`}
+                  whileHover={{ scale: connector.ready ? 1.05 : 1 }}
+                  onClick={() => connector.ready && handleConnect(connector)}
                 >
                   <img
                     src={connector.icon}
@@ -100,7 +107,14 @@ const WalletConnect = () => {
 
             <div className="modal-footer">
               <p>
-                Haven't got a wallet? <a href="#">Get started</a>
+                Haven't got a wallet?{" "}
+                <a
+                  href="https://ethereum.org/wallets/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Get started
+                </a>
               </p>
             </div>
           </motion.div>
