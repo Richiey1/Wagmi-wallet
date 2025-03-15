@@ -1,0 +1,57 @@
+<svg
+  width="200"
+  height="200"
+  viewBox="0 0 200 200"
+  xmlns="http://www.w3.org/2000/svg"
+  fill="none"
+>
+  <!-- Outer Hexagon -->
+  <polygon
+    points="100,10 170,50 170,130 100,170 30,130 30,50"
+    stroke="#00FFFF"
+    stroke-width="5"
+    fill="none"
+  />
+  
+  <!-- Inner Web3 Symbol -->
+  <text
+    x="50%"
+    y="55%"
+    font-family="Arial"
+    font-size="40"
+    fill="#00FFFF"
+    font-weight="bold"
+    text-anchor="middle"
+  >
+    Web3
+  </text>
+  
+  <!-- Glow Effect -->
+  <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+    <feMerge>
+      <feMergeNode in="coloredBlur" />
+      <feMergeNode in="SourceGraphic" />
+    </feMerge>
+  </filter>
+  
+  <!-- Apply Glow -->
+  <g filter="url(#glow)">
+    <polygon
+      points="100,10 170,50 170,130 100,170 30,130 30,50"
+      stroke="#00FFFF"
+      stroke-width="5"
+    />
+    <text
+      x="50%"
+      y="55%"
+      font-family="Arial"
+      font-size="40"
+      fill="#00FFFF"
+      font-weight="bold"
+      text-anchor="middle"
+    >
+      Web3
+    </text>
+  </g>
+</svg>
