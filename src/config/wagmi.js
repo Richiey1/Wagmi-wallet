@@ -1,6 +1,5 @@
 import { http, createConfig } from 'wagmi';
-import { 
-  mainnet, sepolia, base, polygon, polygonMumbai, arbitrum, arbitrumGoerli, 
+import { mainnet, sepolia, base, polygon, polygonMumbai, arbitrum, arbitrumGoerli, 
   optimism, optimismGoerli, avalanche, avalancheFuji, bsc, bscTestnet, 
   fantom, fantomTestnet, scroll, scrollSepolia 
 } from 'wagmi/chains';

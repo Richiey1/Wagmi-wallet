@@ -13,10 +13,8 @@ export const Account = () => {
   const { data: ensAvatar } = useEnsAvatar({ name: ensName });
   const chains = useChains();
   const [copied, setCopied] = useState(false);
-  // Add missing activeTab state
   const [activeTab, setActiveTab] = useState('assets');
   
-  // Add missing transactions mock data
   const transactions = [
     {
       id: '1',

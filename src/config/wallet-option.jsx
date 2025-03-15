@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import { useAccount, useConnect, useDisconnect, useEnsName } from "wagmi";
 import { shortenAddress } from "../utils/addressUtils";
 import { motion } from "framer-motion";
-import {
-  FaCopy,
-  FaCheck,
-  FaTimes,
-  FaWallet,
-  FaShieldAlt,
-} from "react-icons/fa";
+import { FaCopy, FaCheck, FaTimes, FaWallet, FaShieldAlt } from "react-icons/fa";
 import "../config/wallet-option.css";
+
 
 const WalletConnect = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
