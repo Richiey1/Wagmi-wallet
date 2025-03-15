@@ -60,7 +60,7 @@
   padding: 25px;
   border-radius: 15px;
   box-shadow: var(--box-shadow);
-  width: 400px;
+  width: 300px;
   max-width: 90%;
   color: var(--text-primary);
   text-align: center;
@@ -69,7 +69,7 @@
 .wallet-option {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 12px 35px;
   border-radius: 8px;
   background: var(--medium-bg);
